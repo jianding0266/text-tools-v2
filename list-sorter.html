@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>List Sorter - Sort, Shuffle & Deduplicate Text Lists | TextTools</title>
+<meta name="description" content="Free online list sorter. Sort text lists alphabetically, by length, randomly, in reverse order, or remove duplicates. Easy text organization tool.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="List Sorter - Sort & Organize Text Lists | TextTools">
+<meta property="og:description" content="Sort, shuffle, and deduplicate text lists instantly. Free online text organization tool.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quiktexttools.top/list-sorter">
+<link rel="canonical" href="https://quiktexttools.top/list-sorter">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9348194739536572" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"List Sorter","url":"https://quiktexttools.top/list-sorter","description":"Sort, reorder, shuffle, and remove duplicates from text lists.","applicationCategory":"TextEditorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+</head>
+<body>
+<header><div class="header-inner container">
+  <a href="/" class="logo"><span>T</span>TextTools</a>
+  <nav><a href="/"><span>&#8592; Back to Home</span></a>
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </nav>
+</div></header>
+<main class="container">
+<div class="tool-page">
+  <div class="tool-header" style="margin-bottom:24px">
+    <h1>&#128260; List Sorter</h1>
+    <p style="color:var(--text-secondary)">Sort, reorder, shuffle, and organize lines of text. Choose from alphabetical, by length, random, reverse, or remove duplicates.</p>
+  </div>
+  <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9348194739536572" data-ad-slot="1234567802" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+  <div class="tool-body">
+    <label>Input List (one item per line):</label>
+    <textarea id="ls-input" placeholder="Enter items, one per line...&#10;Banana&#10;Apple&#10;Cherry&#10;Date&#10;Elderberry" style="min-height:180px"></textarea>
+    <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:8px">
+      <button class="btn btn-outline btn-sm" onclick="sortLines('az')">A-Z</button>
+      <button class="btn btn-outline btn-sm" onclick="sortLines('za')">Z-A</button>
+      <button class="btn btn-outline btn-sm" onclick="sortLines('short')">Shortest First</button>
+      <button class="btn btn-outline btn-sm" onclick="sortLines('long')">Longest First</button>
+      <button class="btn btn-outline btn-sm" onclick="sortLines('random')">Randomize</button>
+      <button class="btn btn-outline btn-sm" onclick="sortLines('reverse')">Reverse Order</button>
+      <button class="btn btn-outline btn-sm" onclick="sortLines('nodup')">Remove Duplicates</button>
+    </div>
+    <label style="margin-top:16px">Result:</label>
+    <div id="ls-result" class="result-box" style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:14px;min-height:80px;white-space:pre-wrap;font-family:monospace;font-size:0.9em"></div>
+    <div style="margin-top:12px">
+      <button class="btn btn-sm" onclick="copyToClipboard(document.getElementById('ls-result').textContent)">Copy Result</button>
+      <button class="btn btn-sm btn-outline" onclick="document.getElementById('ls-input').value='';document.getElementById('ls-result').textContent=''" style="margin-left:8px">Clear</button>
+    </div>
+  </div>
+</div>
+<div class="content-block">
+  <h2>What Is a List Sorter?</h2>
+  <p>
+    A list sorter is a tool that rearranges lines of text in a specific order. It is commonly used to organize contact lists, shopping lists, task lists, data entries, and any collection of text items. Sorting alphabetically is the most common use, but list sorters also support sorting by length, randomization, reverse ordering, and duplicate removal — making them versatile for many tasks.
+  </p>
+  <h3>Sorting Options Explained</h3>
+  <ul>
+    <li><strong>A-Z (Alphabetical):</strong> Sorts items from A to Z. Case-insensitive, so "apple" and "Banana" are sorted together.</li>
+    <li><strong>Z-A (Reverse Alphabetical):</strong> Sorts items from Z to A. Useful for finding the last items in a list.</li>
+    <li><strong>Shortest First:</strong> Sorts by line length, shortest to longest. Great for organizing words by size.</li>
+    <li><strong>Longest First:</strong> Sorts by line length, longest to shortest. Useful for finding the longest entries.</li>
+    <li><strong>Randomize:</strong> Shuffles the list into a random order. Perfect for picking random items or breaking patterns.</li>
+    <li><strong>Reverse Order:</strong> Simply reverses the list without sorting. The last item becomes the first.</li>
+    <li><strong>Remove Duplicates:</strong> Removes any duplicate lines, keeping only unique entries. Useful for cleaning data.</li>
+  </ul>
+  <h3>Common Use Cases</h3>
+  <p>
+    List sorters are useful in many everyday situations. Teachers use them to organize student names alphabetically. Programmers use them to sort data exports or clean up CSV files. Writers use them to organize brainstorming ideas or outline structures. Anyone working with lists of text data can benefit from quick and accurate sorting.
+  </p>
+</div>
+<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9348194739536572" data-ad-slot="1234567803" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+</main>
+<footer><div class="container"><p>&copy; <span id="year">2026</span> TextTools Online. <a href="/about">About</a> | <a href="/contact">Contact</a> | <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a></p></div></footer>
+<script src="js/common.js"></script>
+<script>function sortLines(method){const text=document.getElementById('ls-input').value;const lines=text.split('\n');let result;switch(method){case'az':result=lines.sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase()));break;case'za':result=lines.sort((a,b)=>b.toLowerCase().localeCompare(a.toLowerCase()));break;case'short':result=lines.sort((a,b)=>a.length-b.length);break;case'long':result=lines.sort((a,b)=>b.length-a.length);break;case'random':result=lines.sort(()=>Math.random()-0.5);break;case'reverse':result=lines.reverse();break;case'nodup':result=[...new Set(lines)];break;default:result=lines;}document.getElementById('ls-result').textContent=result.join('\n');}</script>
+</body>
+</html>
